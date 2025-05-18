@@ -1,19 +1,15 @@
 # 🧠 Home Lab: Wazuh-based SIEM in AWS
 
-This lab demonstrates the setup of a Wazuh-based Intrusion Detection System (IDS) in AWS, reflecting real-world security operations in cloud environments. With cyberattacks like brute-force login attempts and vulnerability exploitation on the rise, organizations need robust monitoring tools to detect threats early.
+This lab demonstrates the setup of a Wazuh-based Intrusion Detection System (IDS) in AWS, reflecting real-world security operations in cloud environments. With cyberattacks like brute-force login attempts and port scans being common, this lab offers hands-on experience in deploying and responding to such threats.
 
-In this lab, you will deploy a Wazuh server, register endpoint agents, simulate attacks from an attacker machine, and analyze alerts and logs through the Wazuh dashboard — mirroring typical incident detection and response workflows used by security teams today.
+In this lab, you will deploy a Wazuh server, register endpoint agents, simulate attacks from an attacker machine, and analyze alerts and logs through the Wazuh dashboard — mirroring typical incident detection/response workflows in a cloud AWS environment.
 
 🎯 Objectives
-Deploy a Wazuh server on AWS EC2
-
-Register and manage endpoint agents through the Wazuh dashboard
-
-Perform simulated attacks including Hydra RDP brute force and Nmap scans
-
-Detect, investigate, and respond to security events in real-time via the Wazuh dashboard
-
-Mirror real-world incident detection and response workflows in a cloud environment
+- Deploy a Wazuh server on AWS EC2
+- Register and manage endpoint agents through the Wazuh dashboard
+- Perform simulated attacks including Hydra RDP brute force and Nmap scans
+- Detect, investigate, and respond to security events in real-time via the Wazuh dashboard
+- Mirror real-world incident detection and response workflows in a cloud environment
 
 ---
 
@@ -117,12 +113,14 @@ bash wazuh-install.sh -a
 - Copy the generated installation link
 - Run on Windows CLI as admin
 
+![Adding Agent on Windows](screenshots/2a_adding_agent_windows.png)
+
 ### b. Ubuntu Target Agent Installation
 
 - Repeat the same steps; choose Linux as OS
 - Run the command on Ubuntu terminal
 
-![Adding Agents via CLI](screenshots/2_adding_agents_cli.png)
+![Adding Agent on Ubuntu](screenshots/2b_adding_agent_ubuntu.png)
 
 ---
 
@@ -212,7 +210,8 @@ This lab walks through a complete threat detection pipeline using Wazuh in AWS, 
 ├── README.md
 └── screenshots/
     ├── 1_wazuh_installation.png
-    ├── 2_adding_agents_cli.png
+    ├── 2a_adding_agent_windows.png
+    ├── 2b_adding_agent_ubuntu.png
     ├── 3_agents_visible_dashboard.png
     ├── 4_nmap_scan_windows.png
     ├── 5_hydra_bruteforce_kali.png
