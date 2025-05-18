@@ -56,7 +56,7 @@ In this lab, you will deploy a Wazuh server, register endpoint agents, simulate 
 |                   |            | Agent Installed       |
 |                   |            +-----------------------+
 |                   | SSH       |                       |
-|                   +<---------->  Kali (Attacker)      |
+|                   +<---------->  Ubuntu (Attacker)      |
 |                   |            | Hydra & Nmap Tools    |
 +-------------------+            +-----------------------+
 ```
