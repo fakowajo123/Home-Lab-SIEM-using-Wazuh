@@ -99,7 +99,7 @@ bash wazuh-install.sh -a
 >
 > Login via browser: `https://<WAZUH_SERVER_PUBLIC_IP>:443`
 
-![Wazuh Server Installed](screenshots/1_wazuh_installation.png)
+![Wazuh Server Installed](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/wazuh_installation.jpg)
 
 ---
 
