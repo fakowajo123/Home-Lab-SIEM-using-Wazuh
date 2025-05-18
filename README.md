@@ -113,14 +113,14 @@ bash wazuh-install.sh -a
 - Copy the generated installation link
 - Run on Windows CLI as admin
 
-![Adding Agent on Windows](screenshots/2a_adding_agent_windows.png)
+![Adding Agent on Windows](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Adding%20agents%20via%20CLI%202.jpg)
 
 ### b. Ubuntu Target Agent Installation
 
 - Repeat the same steps; choose Linux as OS
 - Run the command on Ubuntu terminal
 
-![Adding Agent on Ubuntu](screenshots/2b_adding_agent_ubuntu.png)
+![Adding Agent on Ubuntu](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Adding%20agent%20via%20CLI%201.jpg)
 
 ---
 
@@ -128,7 +128,7 @@ bash wazuh-install.sh -a
 
 - Confirm both agents show "Active" in the Wazuh dashboard.
 
-![Agents Registered](screenshots/3_agents_visible_dashboard.png)
+![Agents Registered](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Agents%20visible%20dashboard.jpg)
 
 ---
 
@@ -140,7 +140,7 @@ Use nmap from attacker machine:
 nmap -sV -O -Pn <windows_target_ip>
 ```
 
-![Nmap Scan on Windows](screenshots/4_nmap_scan_windows.png)
+![Nmap Scan on Windows](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Nmap%20scan_windows.jpg)
 
 ---
 
@@ -149,10 +149,10 @@ nmap -sV -O -Pn <windows_target_ip>
 Use Hydra from Kali:
 
 ```bash
-hydra -t 4 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://<windows_target_ip>
+hydra -t 1 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://<windows_target_ip>
 ```
 
-![Hydra Brute Force](screenshots/5_hydra_bruteforce_kali.png)
+![Hydra Brute Force](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Hydra%20bruteforce.jpg)
 
 ---
 
@@ -160,7 +160,7 @@ hydra -t 4 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://<win
 
 - Monitor alerts in Wazuh dashboard under Security Events
 
-![Brute Force Logs](screenshots/6_bruteforce_log_wazuh.png)
+![Brute Force Logs](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/bruteforce_log_wazuh.jpg)
 
 ---
 
@@ -168,7 +168,7 @@ hydra -t 4 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://<win
 
 - Trace origin of attack and impacted endpoint via log details
 
-![Attacker Investigation](screenshots/7_attacker_investigation.png)
+![Attacker Investigation](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Attcker%20Investigation.jpg)
 
 ---
 
@@ -176,7 +176,7 @@ hydra -t 4 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://<win
 
 - Wazuh performs vulnerability detection for Linux endpoints. Review critical CVEs:
 
-![Ubuntu Vulnerability Detection](screenshots/8_ubuntu_vulnerabilities_wazuh.png)
+![Ubuntu Vulnerability Detection](https://github.com/fakowajo123/Home-Lab-SIEM-using-Wazuh/blob/main/Output/Ubuntu_vulnerabilities.jpg)
 
 ---
 
@@ -200,22 +200,3 @@ hydra -t 4 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://<win
 ## ✅ Conclusion
 
 This lab walks through a complete threat detection pipeline using Wazuh in AWS, from installation to attack simulation, detection, and investigation.
-
----
-
-## 📁 Screenshot Folder Layout
-
-```
-/your-repo/
-├── README.md
-└── screenshots/
-    ├── 1_wazuh_installation.png
-    ├── 2a_adding_agent_windows.png
-    ├── 2b_adding_agent_ubuntu.png
-    ├── 3_agents_visible_dashboard.png
-    ├── 4_nmap_scan_windows.png
-    ├── 5_hydra_bruteforce_kali.png
-    ├── 6_bruteforce_log_wazuh.png
-    ├── 7_attacker_investigation.png
-    └── 8_ubuntu_vulnerabilities_wazuh.png
-```
