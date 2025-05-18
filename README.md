@@ -1,6 +1,19 @@
 # 🧠 Home Lab: Wazuh-based SIEM in AWS
 
-This lab demonstrates a complete setup of a Wazuh-based intrusion detection system (IDS) in AWS. You'll set up a Wazuh server, add endpoint agents, launch attacks (Hydra brute-force and vulnerability scanning), and analyze events via the Wazuh dashboard.
+This lab demonstrates the setup of a Wazuh-based Intrusion Detection System (IDS) in AWS, reflecting real-world security operations in cloud environments. With cyberattacks like brute-force login attempts and vulnerability exploitation on the rise, organizations need robust monitoring tools to detect threats early.
+
+In this lab, you will deploy a Wazuh server, register endpoint agents, simulate attacks from an attacker machine, and analyze alerts and logs through the Wazuh dashboard — mirroring typical incident detection and response workflows used by security teams today.
+
+🎯 Objectives
+Deploy a Wazuh server on AWS EC2
+
+Register and manage endpoint agents through the Wazuh dashboard
+
+Perform simulated attacks including Hydra RDP brute force and Nmap scans
+
+Detect, investigate, and respond to security events in real-time via the Wazuh dashboard
+
+Mirror real-world incident detection and response workflows in a cloud environment
 
 ---
 
